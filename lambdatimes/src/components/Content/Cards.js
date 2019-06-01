@@ -1,4 +1,5 @@
-import React, { /*Component*/ } from 'react';
+import React, { /*Component*/ } from 'react'
+// import PropTypes from 'prop-types'
 import Card from './Card';
 
 const Cards = props => {
@@ -8,7 +9,9 @@ const Cards = props => {
         return (
           <Card
             card={card}
-            key={card.id}
+            key = {
+              Math.floor(Math.random() * 10000) + 1
+            }
           />
         )
       })}
@@ -17,5 +20,10 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
+// Cards.PropTypes = {
+//   cards: PropTypes.arrayOf({
+//     card: PropTypes.object,
+//   })
+// }
 
 export default Cards;
